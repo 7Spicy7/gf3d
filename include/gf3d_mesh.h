@@ -11,6 +11,8 @@
 #include "gfc_primitives.h"
 
 #include "gf3d_pipeline.h"
+#include "gfc_color.h"
+#include "gf3d_buffers.h"
 
 
 //forward declaration:
@@ -24,7 +26,17 @@ typedef struct
     GFC_Matrix4     proj;
     GFC_Vector4D    color;
     GFC_Vector4D    camera;
+    GFC_Vector4D    lightPos;
+    GFC_Vector4D    lightColor;
 }MeshUBO;
+
+typedef struct
+{
+    GFC_Matrix4     model;
+    GFC_Matrix4     view;
+    GFC_Matrix4     proj;
+    GFC_Vector4D    color;
+}SkyUBO;
 
 typedef struct
 {
@@ -68,11 +80,16 @@ typedef struct
  */
 void gf3d_mesh_init(Uint32 mesh_max);
 
+
+void gf3d_mesh_manager_close();
+
+
 /**
  * @brief get a new empty model
  * @return NULL on error, or an empty model
  */
 Mesh *gf3d_mesh_new();
+
 
 /**
  * @brief load mesh data from an obj filename.
@@ -83,20 +100,24 @@ Mesh *gf3d_mesh_new();
  */
 Mesh *gf3d_mesh_load_obj(const char *filename);
 
-/**
- * @brief make an exact, but separate copy of the input mesh
- * @param in the mesh to duplicate
- * @return NULL on error, or a copy of in
- */
-Mesh *gf3d_mesh_copy(Mesh *in);
+/*
+* @brief draw a mesh given the parameters
+*
+*/
+void gf3d_mesh_draw(Mesh* mesh, GFC_Matrix4 modelMat, GFC_Color mod, Texture* texture, GFC_Vector3D lightPos, GFC_Color lightColor);
 
 /**
- * @brief move all of the vertices of the mesh by offset at the buffer level
- * @param in the mesh to move
- * @param offset how much to move it
- * @param rotation apply this rotation to the vertices and normals
+ * @brief queue up a render for the current draw frame
+ * @param mesh the mesh to render
+ * @param pipe the pipeline to use
+ * @param uboData the data to use to draw the mesh
+ * @param texture texture data to use
  */
-void gf3d_mesh_move_vertices(Mesh *in, GFC_Vector3D offset,GFC_Vector3D rotation);
+void gf3d_mesh_queue_render(Mesh* mesh, Pipeline* pipe, void* uboData, Texture* texture);
+
+
+void gf3d_mesh_primitive_queue_render(MeshPrimitive* prim, Pipeline* pipe, void* uboData, Texture* texture);
+
 
 /**
  * @brief allocate a zero initialized mesh primitive
@@ -104,25 +125,12 @@ void gf3d_mesh_move_vertices(Mesh *in, GFC_Vector3D offset,GFC_Vector3D rotation
  */
 MeshPrimitive *gf3d_mesh_primitive_new();
 
-/**
- * @brief append the primitive mesh data of B to the primitive mesh data of A.
- * @note: this merges them at the vertex and face buffer level, making the primitives of A inclusive of the meshes from B.
- * @note: this only applies for the N primitives, which is the smaller of the two lists
- * @param meshA the mesh to gain geometry
- * @param meshB the mesh to provide new geometry, this is unmodified after the process
- * @param offsetB an offset to apply to all the vertices in the second Obj
- * @param rotation apply this rotation to the vertices and normals
- */
-void gf3d_mesh_append(Mesh *meshA, Mesh *meshB, GFC_Vector3D offsetB,GFC_Vector3D rotation);
 
-/**
- * @brief get the scaling factor necessary to make the mesh fit within the bounds
- * @param mesh the mesh to validate (if this is NULL, returns (1,1,1)
- * @param size the dimensions to scale to
- * @return the factor to scale a mesh so that it fits exactly within the size provided.
- * @note: likely you want to uniformly scale based on the SMALLEST of the dimensions
- */
-GFC_Vector3D gf3d_mesh_get_scaled_to(Mesh *mesh,GFC_Vector3D size);
+
+void gf3d_mesh_primitive_free(MeshPrimitive* prim);
+
+
+
 
 /**
  * @brief get the input attribute descriptions for mesh based rendering
@@ -142,66 +150,40 @@ VkVertexInputBindingDescription * gf3d_mesh_get_bind_description();
  */
 void gf3d_mesh_free(Mesh *mesh);
 
-/**
- * @brief needs to be called once at the beginning of each render frame
- */
-void gf3d_mesh_reset_pipes();
-
-/**
- * @brief called to submit all draw commands to the mesh pipelines
- */
-void gf3d_mesh_submit_pipe_commands();
-
-/**
- * @brief get the current command buffer for the mesh system
- */
-VkCommandBuffer gf3d_mesh_get_model_command_buffer();
-VkCommandBuffer gf3d_mesh_get_alph_model_command_buffer();
-VkCommandBuffer gf3d_mesh_get_highlight_command_buffer();
-VkCommandBuffer gf3d_mesh_get_sky_command_buffer();
-
-/**
- * @brief queue up a render for the current draw frame
- * @param mesh the mesh to render
- * @param pipe the pipeline to use
- * @param uboData the data to use to draw the mesh
- * @param texture texture data to use
- */
-void gf3d_mesh_queue_render(Mesh *mesh,Pipeline *pipe,void *uboData,Texture *texture);
+void gf3d_mesh_delete(Mesh* mesh);
 
 
-/**
- * @brief adds a mesh to the render pass rendered as an outline highlight
- * @note: must be called within the render pass
- * @param mesh the mesh to render
- * @param com the command pool to use to handle the request we are rendering with
- */
-void gf3d_mesh_render(Mesh *mesh,VkCommandBuffer commandBuffer, VkDescriptorSet * descriptorSet);
-void gf3d_mesh_alpha_render(Mesh *mesh,VkCommandBuffer commandBuffer, VkDescriptorSet * descriptorSet);
 
-void gf3d_mesh_render_highlight(Mesh *mesh,VkCommandBuffer commandBuffer, VkDescriptorSet * descriptorSet);
-void gf3d_mesh_render_sky(Mesh *mesh,VkCommandBuffer commandBuffer, VkDescriptorSet * descriptorSet);
 
-/**
- * @brief render a mesh through a given pipeline
- */
-void gf3d_mesh_render_generic(Mesh *mesh,Pipeline *pipe,VkDescriptorSet * descriptorSet);
 
 /**
  * @brief create a mesh's internal buffers based on vertices
  * @param primitive the mesh primitive to populate
  * @note the primitive must have the objData set and it must have be organizes in buffer order
  */
-void gf3d_mesh_create_vertex_buffer_from_vertices(MeshPrimitive *primitive);
+void gf3d_mesh_primitive_create_vertex_buffer(MeshPrimitive *primitive);
+
+/**
+ * @brief create a mesh's internal buffers based on faces
+ * @param primitive the mesh primitive to populate
+ * @note the primitive must have the objData set and it must have be organizes in buffer order
+ */
+void gf3d_mesh_primitive_create_face_buffer(MeshPrimitive* primitive);
+
+void gf3d_mesh_move_vertices(Mesh* in, GFC_Vector3D offset, GFC_Vector3D rotation);
 
 /**
  * @brief get the pipeline that is used to render basic 3d meshes
  * @return NULL on error or the pipeline in question
  */
 Pipeline *gf3d_mesh_get_pipeline();
-Pipeline *gf3d_mesh_get_alpha_pipeline();
-Pipeline *gf3d_mesh_get_highlight_pipeline();
-Pipeline *gf3d_mesh_get_sky_pipeline();
+
+/**
+ * @brief Draw the skybox based on the model provided
+ * 
+ */
+void gf3d_mesh_sky_draw(Mesh* mesh, GFC_Matrix4 modelMat, GFC_Color mod, Texture* texture);
+
 
 /**
  * @brief given a model matrix and basic color, build the meshUBO needed to render a model
@@ -213,8 +195,11 @@ MeshUBO gf3d_mesh_get_ubo(
     GFC_Color colorMod);
 
 
-void gf3d_mesh_draw(Mesh mesh, GFC_Matrix4 modelMat, GFC_Color mod, Texture texture, GFC_Vector3D lightPos, GFC_Color lightColor);
 
-void gf3d_mesh_queue_render(Mesh mesh, Pipeline pipe, void *uboData, Texture texture);
+
+
+
+
+
 
 #endif

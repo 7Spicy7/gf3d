@@ -26,6 +26,7 @@ C:\xampp\htdocs\ajr89\git\gf3d\gfc\src\gfc_text.c;C:\xampp\htdocs\ajr89\git\gf3d
 C:\xampp\htdocs\ajr89\git\gf3d\gfc\src\gfc_types.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gfc_types.obj
 C:\xampp\htdocs\ajr89\git\gf3d\gfc\src\gfc_vector.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gfc_vector.obj
 C:\xampp\htdocs\ajr89\git\gf3d\gfc\src\miniz.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\miniz.obj
+C:\xampp\htdocs\ajr89\git\gf3d\src\entity.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\entity.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\game.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\game.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf2d_actor.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf2d_actor.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf2d_camera.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf2d_camera.obj
@@ -33,12 +34,14 @@ C:\xampp\htdocs\ajr89\git\gf3d\src\gf2d_font.c;C:\xampp\htdocs\ajr89\git\gf3d\Th
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf2d_mouse.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf2d_mouse.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf2d_sprite.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf2d_sprite.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_buffers.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_buffers.obj
+C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_camera.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_camera.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_commands.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_commands.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_config.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_config.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_debug.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_debug.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_device.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_device.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_extensions.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_extensions.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_gltf_parse.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_gltf_parse.obj
+C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_mesh.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_mesh.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_obj_load.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_obj_load.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_pipeline.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_pipeline.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_shaders.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_shaders.obj
@@ -48,3 +51,6 @@ C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_uniform_buffers.c;C:\xampp\htdocs\ajr89\
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_validation.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_validation.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_vgraphics.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_vgraphics.obj
 C:\xampp\htdocs\ajr89\git\gf3d\src\gf3d_vqueues.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\gf3d_vqueues.obj
+C:\xampp\htdocs\ajr89\git\gf3d\src\monster.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\monster.obj
+C:\xampp\htdocs\ajr89\git\gf3d\src\player.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\player.obj
+C:\xampp\htdocs\ajr89\git\gf3d\src\world.c;C:\xampp\htdocs\ajr89\git\gf3d\TheGame\TheGame\x64\Release\world.obj
