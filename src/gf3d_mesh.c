@@ -34,10 +34,6 @@ typedef struct
 
 static MeshManager mesh_manager = { 0 };
 
-
-
-
-
 void gf3d_mesh_manager_close()
 {
     int i;

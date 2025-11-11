@@ -67,7 +67,7 @@ int main(int argc,char *argv[])
     gf3d_vgraphics_init("config/setup.cfg");
     gf2d_font_init("config/font.cfg");
     gf2d_actor_init(1000);
-    
+    slog("survived initialization");
     entity_system_init(8000);
     //game init
     srand(SDL_GetTicks());
@@ -81,7 +81,6 @@ int main(int argc,char *argv[])
     gfc_matrix4_identity(id);
     gf3d_camera_look_at(gfc_vector3d(0, 0, 0), &cam);
     mesh = gf3d_mesh_load_obj("models/sky/sky.obj");
-  
     texture = gf3d_texture_load("models/sky/sky.png");
     monster = monster_spawn(gfc_vector3d(5, 0, 0), GFC_COLOR_WHITE);
     player = player_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
@@ -98,14 +97,18 @@ int main(int argc,char *argv[])
         //camera updates
         gf3d_camera_update_view();
         gf3d_vgraphics_render_start();
+        slog("vgraphics started");
                 //3D draws
                 gf3d_mesh_sky_draw(mesh, modelMat, GFC_COLOR_WHITE, texture);
                 entity_system_draw_all(lightPos, GFC_COLOR_RED); //Change id to dinoM
+                slog("things drawn (1/2)");
                 //2D draws
                // gf2d_sprite_draw_image(bg,gfc_vector2d(0,0));
                 gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
                 gf2d_mouse_draw();
+                slog("things drawn (2/2)");
         gf3d_vgraphics_render_end();
+        slog("vgraphics passed");
         if (gfc_input_command_down("exit"))_done = 1; // exit condition
         game_frame_delay();
     }    

@@ -56,8 +56,8 @@ Entity* entity_new();
 void entity_free(Entity* ent);
 
 /*
-@brief Initilizes the enttiy subsystem
-@param max_ents jpw ,amu tp sipport concurrently
+@brief Initilizes the entity subsystem
+@param max_ents jpw ,amu tp support concurrently
 */
 void entity_system_init(Uint32 max_ents);
 
@@ -79,7 +79,7 @@ void entity_update(Entity* ent);
 
 void entity_system_move_all();
 
-void entity_move();
+void entity_move(Entity *self);
 
 Uint8 entity_get_floor_pos(Entity* ent, World* world, GFC_Vector3D* contact);
 

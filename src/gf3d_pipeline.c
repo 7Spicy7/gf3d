@@ -747,7 +747,6 @@ void gf3d_pipeline_reset_frame(Pipeline *pipe,Uint32 frame)
         return;
     }
     pipe->descriptorCursor[frame] = 0;
-    
     pipe->commandBuffer = gf3d_command_rendering_begin(frame,pipe);
     pipe->drawCallCount = 0;
     memset(pipe->drawCallList,0,sizeof(PipelineDrawCall)*pipe->drawCallListCount);//clear this out

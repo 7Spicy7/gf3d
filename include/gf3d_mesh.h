@@ -83,7 +83,6 @@ void gf3d_mesh_init(Uint32 mesh_max);
 
 void gf3d_mesh_manager_close();
 
-
 /**
  * @brief get a new empty model
  * @return NULL on error, or an empty model
