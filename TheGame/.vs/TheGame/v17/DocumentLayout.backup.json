@@ -3,6 +3,12 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\TheGame\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_vgraphics.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -22,12 +28,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\entity.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_vgraphics.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_commands.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -52,7 +52,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "gf3d_shaders.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\gf3d_shaders.h",
               "RelativeDocumentMoniker": "..\\include\\gf3d_shaders.h",
@@ -72,12 +72,11 @@
               "RelativeToolTip": "..\\include\\gf3d_shaders.h",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-11T18:08:55.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T18:08:55.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "model_pipeline.cfg",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\model_pipeline.cfg",
               "RelativeDocumentMoniker": "..\\config\\model_pipeline.cfg",
@@ -85,8 +84,7 @@
               "RelativeToolTip": "..\\config\\model_pipeline.cfg",
               "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-11T16:10:35.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T16:10:35.352Z"
             },
             {
               "$type": "Document",
@@ -138,31 +136,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "gf3d_vgraphics.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_vgraphics.c",
               "RelativeDocumentMoniker": "..\\src\\gf3d_vgraphics.c",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_vgraphics.c",
               "RelativeToolTip": "..\\src\\gf3d_vgraphics.c",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAhwMwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAEwM8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-10T00:19:21.915Z"
+              "WhenOpened": "2025-11-10T00:19:21.915Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "entity.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\entity.h",
               "RelativeDocumentMoniker": "..\\include\\entity.h",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\entity.h",
               "RelativeToolTip": "..\\include\\entity.h",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-09T20:23:48.05Z"
+              "WhenOpened": "2025-11-09T20:23:48.05Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "entity.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\entity.c",
               "RelativeDocumentMoniker": "..\\src\\entity.c",
@@ -170,8 +170,7 @@
               "RelativeToolTip": "..\\src\\entity.c",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-09T01:34:04.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T01:34:04.77Z"
             },
             {
               "$type": "Document",
@@ -187,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "game.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c",
               "RelativeDocumentMoniker": "..\\src\\game.c",
@@ -200,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "gf3d_mesh.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_mesh.c",
               "RelativeDocumentMoniker": "..\\src\\gf3d_mesh.c",
@@ -208,12 +207,11 @@
               "RelativeToolTip": "..\\src\\gf3d_mesh.c",
               "ViewState": "AgIAAJoBAAAAAAAAAAAAACIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-03T18:51:34.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T18:51:34.31Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "gf3d_camera.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\gf3d_camera.h",
               "RelativeDocumentMoniker": "..\\include\\gf3d_camera.h",
@@ -221,12 +219,11 @@
               "RelativeToolTip": "..\\include\\gf3d_camera.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-03T18:40:49.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T18:40:49.246Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "gf3d_mesh.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\gf3d_mesh.h",
               "RelativeDocumentMoniker": "..\\include\\gf3d_mesh.h",
@@ -234,8 +231,7 @@
               "RelativeToolTip": "..\\include\\gf3d_mesh.h",
               "ViewState": "AgIAAKsAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-03T18:04:48.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T18:04:48.262Z"
             }
           ]
         }
