@@ -97,18 +97,14 @@ int main(int argc,char *argv[])
         //camera updates
         gf3d_camera_update_view();
         gf3d_vgraphics_render_start();
-        slog("vgraphics started");
                 //3D draws
                 gf3d_mesh_sky_draw(mesh, modelMat, GFC_COLOR_WHITE, texture);
                 entity_system_draw_all(lightPos, GFC_COLOR_RED); //Change id to dinoM
-                slog("things drawn (1/2)");
                 //2D draws
                // gf2d_sprite_draw_image(bg,gfc_vector2d(0,0));
                 gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
                 gf2d_mouse_draw();
-                slog("things drawn (2/2)");
         gf3d_vgraphics_render_end();
-        slog("vgraphics passed");
         if (gfc_input_command_down("exit"))_done = 1; // exit condition
         game_frame_delay();
     }    
