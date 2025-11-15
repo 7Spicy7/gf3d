@@ -23,6 +23,7 @@
 #include "gf3d_mesh.h"
 #include "entity.h"
 #include "monster.h"
+#include "player.h"
 
 #include "gf3d_camera.h"
 
@@ -51,7 +52,7 @@ int main(int argc,char *argv[])
     Entity* player;
     float theta = 0;
     GFC_Vector3D lightPos = { 5,5,20 };
-    GFC_Vector3D cam = { 0,50,0 };
+    GFC_Vector3D cam = { 0,-500,0 };
     GFC_Matrix4 id, dinoM;
     GFC_Matrix4 modelMat;
     //initializtion    
@@ -82,7 +83,7 @@ int main(int argc,char *argv[])
     gf3d_camera_look_at(gfc_vector3d(0, 0, 0), &cam);
     mesh = gf3d_mesh_load_obj("models/sky/sky.obj");
     texture = gf3d_texture_load("models/sky/sky.png");
-    monster = monster_spawn(gfc_vector3d(5, 0, 0), GFC_COLOR_WHITE);
+    monster = monster_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     player = player_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     while(!_done)
     {
