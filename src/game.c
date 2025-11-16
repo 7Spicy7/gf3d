@@ -24,6 +24,7 @@
 #include "entity.h"
 #include "monster.h"
 #include "player.h"
+#include "camera_entity.h"
 
 #include "gf3d_camera.h"
 
@@ -52,13 +53,14 @@ int main(int argc,char *argv[])
     Entity* player;
     float theta = 0;
     GFC_Vector3D lightPos = { 5,5,20 };
-    GFC_Vector3D cam = { 0,-500,0 };
+    //GFC_Vector3D cam = { 0,-50,0 };
+    Entity* cam;
     GFC_Matrix4 id, dinoM;
     GFC_Matrix4 modelMat;
     //initializtion    
+
     parse_arguments(argc,argv);
     init_logger("gf3d.log",0); //1 wont delete log file at end
-    slog("gf3d begin");
     //gfc init
     gfc_input_init("config/input.cfg");
     gfc_config_def_init();
@@ -68,7 +70,6 @@ int main(int argc,char *argv[])
     gf3d_vgraphics_init("config/setup.cfg");
     gf2d_font_init("config/font.cfg");
     gf2d_actor_init(1000);
-    slog("survived initialization");
     entity_system_init(8000);
     //game init
     srand(SDL_GetTicks());
@@ -85,6 +86,8 @@ int main(int argc,char *argv[])
     texture = gf3d_texture_load("models/sky/sky.png");
     monster = monster_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     player = player_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
+    cam = camera_entity_spawn(&player);
+    slog("cam position %i, %i, %i", cam->position.x, cam->position.y, cam->position.z);
     while(!_done)
     {
         gfc_input_update();
@@ -96,7 +99,7 @@ int main(int argc,char *argv[])
         entity_system_update_all();
         entity_system_move_all();
         //camera updates
-        gf3d_camera_update_view();
+        //gf3d_camera_update_view();
         gf3d_vgraphics_render_start();
                 //3D draws
                 gf3d_mesh_sky_draw(mesh, modelMat, GFC_COLOR_WHITE, texture);

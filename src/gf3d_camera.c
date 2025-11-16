@@ -83,7 +83,7 @@ void gf3d_camera_look_at(GFC_Vector3D target,const GFC_Vector3D *position)
     GFC_Vector3D angles,pos;
     GFC_Vector3D delta;
     if (position)
-    {
+     {
         gfc_vector3d_copy(pos,(*position));
         gf3d_camera_set_position(pos);
     }

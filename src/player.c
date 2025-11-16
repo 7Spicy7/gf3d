@@ -18,7 +18,6 @@ Entity* player_spawn(GFC_Vector3D position, GFC_Color color)
 	self->rotation.y = 90;
 	self->velocity.x = 0;
 	//self->velocity.z = gfc_crandom();
-	slog("Made it here");
 	return self;
 }
 
