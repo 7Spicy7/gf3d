@@ -125,6 +125,7 @@ void entity_system_think_all()
 		if (entity_system.entity_list[i]._inuse)
 		{
 			entity_think(&entity_system.entity_list[i]);
+			slog("%s is thinkin", entity_system.entity_list[i].name);
 		}
 	}
 }

@@ -703,4 +703,3 @@ GFC_Vector3D vgraphics_3d_position_to_screen_depth(GFC_Vector3D position)
 
 
 /*eol@eof*/
-

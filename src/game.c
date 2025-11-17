@@ -56,6 +56,7 @@ int main(int argc,char *argv[])
     //GFC_Vector3D cam = { 0,-50,0 };
     Entity* cam;
     GFC_Matrix4 id, dinoM;
+    const Uint8* keys;
     GFC_Matrix4 modelMat;
     //initializtion    
 
@@ -81,7 +82,7 @@ int main(int argc,char *argv[])
 
     gfc_matrix4_identity(modelMat);
     gfc_matrix4_identity(id);
-    gf3d_camera_look_at(gfc_vector3d(0, 0, 0), &cam);
+    //gf3d_camera_look_at(gfc_vector3d(0, 0, 0), &cam);
     mesh = gf3d_mesh_load_obj("models/sky/sky.obj");
     texture = gf3d_texture_load("models/sky/sky.png");
     monster = monster_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
@@ -90,6 +91,7 @@ int main(int argc,char *argv[])
     slog("cam position %i, %i, %i", cam->position.x, cam->position.y, cam->position.z);
     while(!_done)
     {
+        keys = SDL_GetKeyboardState(NULL);
         gfc_input_update();
         gf2d_mouse_update();
         gf2d_font_update();

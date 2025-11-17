@@ -200,7 +200,7 @@ void camera_entity_think(Entity* self) {
 	if (gfc_input_command_down("pandown")) {
 		data->followHeight -= look;
 	}
-
+	
 	//gf3d_camera_look_at(data->target->position, &self->position);
 
 }
