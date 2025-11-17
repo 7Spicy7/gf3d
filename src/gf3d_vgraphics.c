@@ -103,6 +103,12 @@ void gf3d_vgraphics_setup(
     const char *config
 );
 
+void gf3d_vgraphics_set_view(GFC_Matrix4 *view)
+{
+    if (!view)return;
+    memcpy(gf3d_vgraphics.ubo.view, view, sizeof(GFC_Matrix4));
+}
+
 void gf3d_vgraphics_init(const char *config)
 {
     Pipeline *renderPipe= NULL;

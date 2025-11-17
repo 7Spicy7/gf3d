@@ -21,10 +21,6 @@ Entity* player_spawn(GFC_Vector3D position, GFC_Color color)
 	return self;
 }
 
-
-
-
-
 void player_think(Entity* self)
 {
 	if (!self) return;
@@ -37,15 +33,6 @@ void player_move(Entity* self)
 	if (!self) return;
 	const Uint8* keys = SDL_GetKeyboardState(NULL);
 	//Movement Up/Down
-	if (gfc_input_command_down("walkforward"))
-	{
-		slog("Pressed w");
-		self->velocity.x = 3;
-	}
-	else
-	{
-		self->velocity.x = 0;
-	}
 	if (gfc_input_command_down("walkforward"))
 	{
 		slog("Pressed w");
@@ -92,4 +79,11 @@ void player_move(Entity* self)
 		self->rotation.z = 0;
 	}
 
+}
+
+void player_update(Entity *self) {
+	if (!self) return;
+	self->position.x = self->position.x + self->velocity.x;
+	self->position.y = self->position.y + self->velocity.y;
+	self->position.z = self->position.z + self->velocity.z;
 }

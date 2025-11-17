@@ -53,7 +53,6 @@ int main(int argc,char *argv[])
     Entity* player;
     float theta = 0;
     GFC_Vector3D lightPos = { 5,5,20 };
-    //GFC_Vector3D cam = { 0,-50,0 };
     Entity* cam;
     GFC_Matrix4 id, dinoM;
     const Uint8* keys;
@@ -101,7 +100,6 @@ int main(int argc,char *argv[])
         entity_system_update_all();
         entity_system_move_all();
         //camera updates
-        //gf3d_camera_update_view();
         gf3d_vgraphics_render_start();
                 //3D draws
                 gf3d_mesh_sky_draw(mesh, modelMat, GFC_COLOR_WHITE, texture);

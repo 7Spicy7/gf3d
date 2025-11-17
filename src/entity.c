@@ -150,7 +150,7 @@ void entity_update(Entity* ent)
 	//{
 	//	gfc_vector3d_add(ent->position, ent->)
 	//}
-	if (ent->think) ent->think(ent);
+	if (ent->update) ent->update(ent);
 }
 
 

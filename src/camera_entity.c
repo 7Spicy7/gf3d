@@ -220,6 +220,7 @@ void camera_entity_update(Entity* self) {
 	gfc_vector3d_add(self->position, offset, data->target->position);
 
 	gf3d_camera_look_at(data->target->position, &self->position); //nearly forgot this line when I moved the offset code from Think into Update lol
+	gf3d_camera_update_view();
 }
 
 Entity* camera_entity_spawn(Entity *target) {
@@ -235,8 +236,8 @@ Entity* camera_entity_spawn(Entity *target) {
 		slog("Cannot allocate Camera Entity Data. Not spawning");
 		return NULL;
 	}
-	self->think = camera_entity_think;
-	self->update = camera_entity_update;
+//	self->think = camera_entity_think;
+	//self->update = camera_entity_update;
 	self->free = camera_entity_free;
 	self->position = gfc_vector3d(0,50,50);	
 	slog("cam position %i, %i, %i", self->position.x, self->position.y, self->position.z);
@@ -253,6 +254,7 @@ Entity* camera_entity_spawn(Entity *target) {
 
 	//Look in that direction:
 	gf3d_camera_look_at(target->position, &self->position);
+	gf3d_camera_update_view();
 
 	return self;
 }
