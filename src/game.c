@@ -25,6 +25,7 @@
 #include "monster.h"
 #include "player.h"
 #include "camera_entity.h"
+#include "ground.h"
 
 #include "gf3d_camera.h"
 
@@ -51,6 +52,7 @@ int main(int argc,char *argv[])
     Texture* texture;
     Entity* monster;
     Entity* player;
+    Entity* ground;
     float theta = 0;
     GFC_Vector3D lightPos = { 5,5,20 };
     Entity* cam;
@@ -86,6 +88,7 @@ int main(int argc,char *argv[])
     texture = gf3d_texture_load("models/sky/sky.png");
     monster = monster_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     player = player_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
+    ground = ground_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     cam = camera_entity_spawn(&player);
     slog("cam position %i, %i, %i", cam->position.x, cam->position.y, cam->position.z);
     while(!_done)

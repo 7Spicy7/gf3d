@@ -15,7 +15,8 @@ Entity* player_spawn(GFC_Vector3D position, GFC_Color color)
 	self->color = color;
 	self->position = position;
 	self->think = player_think;
-	self->rotation.y = 90;
+	self->update = player_update;
+	self->rotation.y = 270;
 	self->velocity.x = 0;
 	//self->velocity.z = gfc_crandom();
 	return self;
@@ -74,16 +75,10 @@ void player_move(Entity* self)
 		slog("Pressed e");
 		self->rotation.z = self->rotation.z - 1;
 	}
-	else
-	{
-		self->rotation.z = 0;
-	}
-
 }
 
 void player_update(Entity *self) {
 	if (!self) return;
 	self->position.x = self->position.x + self->velocity.x;
 	self->position.y = self->position.y + self->velocity.y;
-	self->position.z = self->position.z + self->velocity.z;
 }

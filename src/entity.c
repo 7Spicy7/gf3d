@@ -125,7 +125,6 @@ void entity_system_think_all()
 		if (entity_system.entity_list[i]._inuse)
 		{
 			entity_think(&entity_system.entity_list[i]);
-			slog("%s is thinkin", entity_system.entity_list[i].name);
 		}
 	}
 }
@@ -146,10 +145,6 @@ void entity_system_update_all()
 void entity_update(Entity* ent)
 {
 	if (!ent) return;
-	//if (ent->doGenericUpdate)
-	//{
-	//	gfc_vector3d_add(ent->position, ent->)
-	//}
 	if (ent->update) ent->update(ent);
 }
 
