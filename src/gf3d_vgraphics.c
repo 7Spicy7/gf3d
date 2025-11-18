@@ -28,6 +28,7 @@
 #include "gf3d_commands.h"
 #include "gf3d_texture.h"
 #include "gf2d_sprite.h"
+#include "gf3d_mesh.h"
 
 #include "gf3d_vgraphics.h"
 
@@ -101,6 +102,12 @@ void gf3d_vgraphics_setup(
     Bool enableDebug,
     const char *config
 );
+
+void gf3d_vgraphics_set_view(GFC_Matrix4 *view)
+{
+    if (!view)return;
+    memcpy(gf3d_vgraphics.ubo.view, view, sizeof(GFC_Matrix4));
+}
 
 void gf3d_vgraphics_init(const char *config)
 {
@@ -199,8 +206,12 @@ void gf3d_vgraphics_init(const char *config)
     gf3d_vgraphics.graphicsCommandPool = gf3d_command_graphics_pool_setup(gf3d_swapchain_get_swap_image_count());
 
     gf3d_vgraphics.enable_2d = 1;
+
+    gf3d_mesh_init(1024);
+
     gf2d_sprite_manager_init(1024);
-    renderPipe = gf2d_sprite_get_pipeline();
+
+    renderPipe = gf3d_mesh_get_pipeline();
 
     gf3d_swapchain_create_depth_image();
     gf3d_swapchain_setup_frame_buffers(renderPipe);
@@ -698,4 +709,3 @@ GFC_Vector3D vgraphics_3d_position_to_screen_depth(GFC_Vector3D position)
 
 
 /*eol@eof*/
-

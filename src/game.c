@@ -23,6 +23,9 @@
 #include "gf3d_mesh.h"
 #include "entity.h"
 #include "monster.h"
+#include "player.h"
+#include "camera_entity.h"
+#include "ground.h"
 
 #include "gf3d_camera.h"
 
@@ -49,15 +52,17 @@ int main(int argc,char *argv[])
     Texture* texture;
     Entity* monster;
     Entity* player;
+    Entity* ground;
     float theta = 0;
     GFC_Vector3D lightPos = { 5,5,20 };
-    GFC_Vector3D cam = { 0,50,0 };
+    Entity* cam;
     GFC_Matrix4 id, dinoM;
+    const Uint8* keys;
     GFC_Matrix4 modelMat;
     //initializtion    
+
     parse_arguments(argc,argv);
     init_logger("gf3d.log",0); //1 wont delete log file at end
-    slog("gf3d begin");
     //gfc init
     gfc_input_init("config/input.cfg");
     gfc_config_def_init();
@@ -67,7 +72,6 @@ int main(int argc,char *argv[])
     gf3d_vgraphics_init("config/setup.cfg");
     gf2d_font_init("config/font.cfg");
     gf2d_actor_init(1000);
-    slog("survived initialization");
     entity_system_init(8000);
     //game init
     srand(SDL_GetTicks());
@@ -79,13 +83,17 @@ int main(int argc,char *argv[])
 
     gfc_matrix4_identity(modelMat);
     gfc_matrix4_identity(id);
-    gf3d_camera_look_at(gfc_vector3d(0, 0, 0), &cam);
+    //gf3d_camera_look_at(gfc_vector3d(0, 0, 0), &cam);
     mesh = gf3d_mesh_load_obj("models/sky/sky.obj");
     texture = gf3d_texture_load("models/sky/sky.png");
-    monster = monster_spawn(gfc_vector3d(5, 0, 0), GFC_COLOR_WHITE);
+    monster = monster_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     player = player_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
+    ground = ground_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
+    cam = camera_entity_spawn(&player);
+    slog("cam position %i, %i, %i", cam->position.x, cam->position.y, cam->position.z);
     while(!_done)
     {
+        keys = SDL_GetKeyboardState(NULL);
         gfc_input_update();
         gf2d_mouse_update();
         gf2d_font_update();
@@ -95,20 +103,15 @@ int main(int argc,char *argv[])
         entity_system_update_all();
         entity_system_move_all();
         //camera updates
-        gf3d_camera_update_view();
         gf3d_vgraphics_render_start();
-        slog("vgraphics started");
                 //3D draws
                 gf3d_mesh_sky_draw(mesh, modelMat, GFC_COLOR_WHITE, texture);
                 entity_system_draw_all(lightPos, GFC_COLOR_RED); //Change id to dinoM
-                slog("things drawn (1/2)");
                 //2D draws
                // gf2d_sprite_draw_image(bg,gfc_vector2d(0,0));
                 gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
                 gf2d_mouse_draw();
-                slog("things drawn (2/2)");
         gf3d_vgraphics_render_end();
-        slog("vgraphics passed");
         if (gfc_input_command_down("exit"))_done = 1; // exit condition
         game_frame_delay();
     }    

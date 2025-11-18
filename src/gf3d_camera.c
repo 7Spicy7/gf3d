@@ -43,7 +43,7 @@ void gf3d_camera_update_view()
     gf3d_camera.cameraMat[3][0] = gfc_vector3d_dot_product(xaxis, position);
     gf3d_camera.cameraMat[3][1] = gfc_vector3d_dot_product(yaxis, position);
     gf3d_camera.cameraMat[3][2] = gfc_vector3d_dot_product(zaxis, position);
-    // gf3d_vgraphics_set_view(gf3d_camera.cameraMat);
+    gf3d_vgraphics_set_view(gf3d_camera.cameraMat);
 }
 
 GFC_Vector3D gf3d_camera_get_position()
@@ -83,7 +83,7 @@ void gf3d_camera_look_at(GFC_Vector3D target,const GFC_Vector3D *position)
     GFC_Vector3D angles,pos;
     GFC_Vector3D delta;
     if (position)
-    {
+     {
         gfc_vector3d_copy(pos,(*position));
         gf3d_camera_set_position(pos);
     }

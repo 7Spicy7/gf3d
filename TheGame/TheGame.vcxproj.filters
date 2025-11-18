@@ -186,6 +186,12 @@
     <ClInclude Include="..\include\world.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\camera_entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ground.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\game.c">
@@ -354,6 +360,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\gf3d_camera.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\camera_entity.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ground.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

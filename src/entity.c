@@ -145,11 +145,7 @@ void entity_system_update_all()
 void entity_update(Entity* ent)
 {
 	if (!ent) return;
-	//if (ent->doGenericUpdate)
-	//{
-	//	gfc_vector3d_add(ent->position, ent->)
-	//}
-	if (ent->think) ent->think(ent);
+	if (ent->update) ent->update(ent);
 }
 
 
