@@ -110,6 +110,12 @@ int main(int argc,char *argv[])
                 //2D draws
                // gf2d_sprite_draw_image(bg,gfc_vector2d(0,0));
                 gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
+                if ((player->velocity.x != 0) || (player->velocity.y != 0)) {
+                    gf2d_font_draw_line_tag("Shmovement :)", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 40));
+                }
+                else {
+                    gf2d_font_draw_line_tag("No Shmovement :(", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 40));
+                }
                 gf2d_mouse_draw();
         gf3d_vgraphics_render_end();
         if (gfc_input_command_down("exit"))_done = 1; // exit condition
