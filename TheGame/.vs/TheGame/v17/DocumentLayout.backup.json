@@ -6,6 +6,21 @@
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\camera_entity.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\monster.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\gfc\\src\\gfc_input.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -15,16 +30,7 @@
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\ground.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\gfc\\src\\gfc_input.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\camera_entity.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\camera_entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\model_pipeline.cfg||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
@@ -39,13 +45,7 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\input.cfg||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\monster.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_vgraphics.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -86,7 +86,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "input.cfg",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\input.cfg",
               "RelativeDocumentMoniker": "..\\config\\input.cfg",
@@ -107,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ground.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\ground.c",
               "RelativeDocumentMoniker": "..\\src\\ground.c",
@@ -115,12 +115,11 @@
               "RelativeToolTip": "..\\src\\ground.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-17T17:44:42.259Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T17:44:42.259Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "ground.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\ground.h",
               "RelativeDocumentMoniker": "..\\include\\ground.h",
@@ -128,8 +127,7 @@
               "RelativeToolTip": "..\\include\\ground.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-17T17:44:22.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T17:44:22.382Z"
             },
             {
               "$type": "Document",
@@ -146,19 +144,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "player.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c",
               "RelativeDocumentMoniker": "..\\src\\player.c",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c",
               "RelativeToolTip": "..\\src\\player.c",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-10T00:27:48.755Z"
+              "WhenOpened": "2025-11-10T00:27:48.755Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "gf3d_camera.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_camera.c",
               "RelativeDocumentMoniker": "..\\src\\gf3d_camera.c",
@@ -170,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "camera_entity.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\camera_entity.h",
               "RelativeDocumentMoniker": "..\\include\\camera_entity.h",
@@ -182,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "camera_entity.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\camera_entity.c",
               "RelativeDocumentMoniker": "..\\src\\camera_entity.c",
@@ -195,19 +194,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "monster.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\monster.c",
               "RelativeDocumentMoniker": "..\\src\\monster.c",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\monster.c",
               "RelativeToolTip": "..\\src\\monster.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-15T13:53:49.415Z"
+              "WhenOpened": "2025-11-15T13:53:49.415Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "monster.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\monster.h",
               "RelativeDocumentMoniker": "..\\include\\monster.h",
@@ -219,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "player.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\player.h",
               "RelativeDocumentMoniker": "..\\include\\player.h",
@@ -227,7 +227,8 @@
               "RelativeToolTip": "..\\include\\player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-15T01:59:43.989Z"
+              "WhenOpened": "2025-11-15T01:59:43.989Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -255,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "model_pipeline.cfg",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\model_pipeline.cfg",
               "RelativeDocumentMoniker": "..\\config\\model_pipeline.cfg",
@@ -303,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "entity.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\entity.c",
               "RelativeDocumentMoniker": "..\\src\\entity.c",
@@ -327,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "entity.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\entity.h",
               "RelativeDocumentMoniker": "..\\include\\entity.h",
@@ -335,8 +336,7 @@
               "RelativeToolTip": "..\\include\\entity.h",
               "ViewState": "AgIAADwAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-09T20:23:48.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T20:23:48.05Z"
             },
             {
               "$type": "Document",
@@ -346,7 +346,7 @@
               "RelativeDocumentMoniker": "..\\src\\game.c",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c",
               "RelativeToolTip": "..\\src\\game.c",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAUwHEAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAAHYAAACKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-09T01:27:03.407Z",
               "EditorCaption": ""

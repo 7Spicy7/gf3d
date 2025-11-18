@@ -86,7 +86,7 @@ int main(int argc,char *argv[])
     //gf3d_camera_look_at(gfc_vector3d(0, 0, 0), &cam);
     mesh = gf3d_mesh_load_obj("models/sky/sky.obj");
     texture = gf3d_texture_load("models/sky/sky.png");
-    monster = monster_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
+    monster = monster_spawn(gfc_vector3d(-10, 0, 0), GFC_COLOR_WHITE);
     player = player_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     ground = ground_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     cam = camera_entity_spawn(&player);
@@ -115,6 +115,9 @@ int main(int argc,char *argv[])
                 }
                 else {
                     gf2d_font_draw_line_tag("No Shmovement :(", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 40));
+                }
+                if (((player->position.x >= -12) && (player->position.x <= -8)) && ((player->position.y >= -2) && (player->position.y <= 2))) {
+                    gf2d_font_draw_line_tag("Contact", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 70));
                 }
                 gf2d_mouse_draw();
         gf3d_vgraphics_render_end();
