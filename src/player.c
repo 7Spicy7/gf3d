@@ -36,13 +36,28 @@ void player_move(Entity* self)
 	//Movement Up/Down
 	if (gfc_input_command_down("walkforward"))
 	{
-		slog("Pressed w");
-		self->velocity.y = -3;
+		if (self->position.y - 1 <= -100)
+		{
+			slog("Pressed w, can't go further");
+			self->velocity.y = 0;
+		}
+		else {
+			slog("Pressed w");
+			self->velocity.y = -1;
+		}
+		
 	}
 	else if (gfc_input_command_down("walkback"))
 	{
-		slog("Pressed s");
-		self->velocity.y = 3;
+		if (self->position.y + 1 >= 100)
+		{
+			slog("Pressed s, can't go further");
+			self->velocity.y = 0;
+		}
+		else {
+			slog("Pressed s");
+			self->velocity.y = 1;
+		}
 	}
 	else
 	{
@@ -51,13 +66,27 @@ void player_move(Entity* self)
 	//Movement left/right
 	if (gfc_input_command_down("walkleft"))
 	{
-		slog("Pressed a");
-		self->velocity.x = 3;
+		if (self->position.x + 1 >= 100)
+		{
+			slog("Pressed a, can't go further");
+			self->velocity.x = 0;
+		}
+		else {
+			slog("Pressed a");
+			self->velocity.x = 1;
+		}
 	}
 	else if (gfc_input_command_down("walkright"))
 	{
-		slog("Pressed d");
-		self->velocity.x = -3;
+		if (self->position.x - 1 <= -100)
+		{
+			slog("Pressed d, can't go further");
+			self->velocity.x = 0;
+		}
+		else {
+			slog("Pressed d");
+			self->velocity.x = -1;
+		}
 	}
 	else
 	{
