@@ -40,9 +40,11 @@ void player_move(Entity* self)
 		{
 			slog("Pressed w, can't go further");
 			self->velocity.y = 0;
+			self->rotation.z = 0;
 		}
 		else {
 			slog("Pressed w");
+			self->rotation.z = 0;
 			self->velocity.y = -1;
 		}
 		
@@ -53,10 +55,12 @@ void player_move(Entity* self)
 		{
 			slog("Pressed s, can't go further");
 			self->velocity.y = 0;
+			self->rotation.z = 0.5;
 		}
 		else {
 			slog("Pressed s");
 			self->velocity.y = 1;
+			self->rotation.z = 0.5;
 		}
 	}
 	else

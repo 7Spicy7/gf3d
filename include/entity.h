@@ -39,6 +39,10 @@ typedef struct Entity_S
 	Uint8							onGround;
 	Uint8							justSpawned; //A check for first spawn to snap to ground
 	void*							data;
+	GFC_Vector3D*                   targetPos; //used by camera
+	float folheight;
+	float foldist;
+	float folangle;
 }Entity;
 
 

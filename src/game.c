@@ -101,6 +101,7 @@ int main(int argc,char *argv[])
         gfc_matrix4_rotate_z(dinoM, id, theta);
         entity_system_think_all();
         entity_system_update_all();
+        camera_entity_update2(cam, player);
         entity_system_move_all();
         //camera updates
         gf3d_vgraphics_render_start();

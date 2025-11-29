@@ -21,4 +21,5 @@ Entity* camera_entity_spawn(Entity* target);
 
 void camera_entity_update(Entity* self);
 
+void camera_entity_update2(Entity* self, Entity* target);
 #endif
