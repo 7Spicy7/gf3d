@@ -13,6 +13,6 @@ Entity* ground_spawn(GFC_Vector3D position, GFC_Color color) {
 	self->texture = gf3d_texture_load("models/ground/groundtexture.png");
 	self->color = color;
 	self->position = position;
-	self->rotation.y = -80;
+	self->rotation.y = 1.57;
 	return self;
 }

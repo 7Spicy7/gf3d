@@ -55,12 +55,12 @@ void player_move(Entity* self)
 		{
 			slog("Pressed s, can't go further");
 			self->velocity.y = 0;
-			self->rotation.z = 0.5;
+			self->rotation.z = 3.14;
 		}
 		else {
 			slog("Pressed s");
 			self->velocity.y = 1;
-			self->rotation.z = 0.5;
+			self->rotation.z = 3.14;
 		}
 	}
 	else
@@ -74,10 +74,12 @@ void player_move(Entity* self)
 		{
 			slog("Pressed a, can't go further");
 			self->velocity.x = 0;
+			self->rotation.z = 1.57;
 		}
 		else {
 			slog("Pressed a");
 			self->velocity.x = 1;
+			self->rotation.z = 1.57;
 		}
 	}
 	else if (gfc_input_command_down("walkright"))
@@ -86,10 +88,12 @@ void player_move(Entity* self)
 		{
 			slog("Pressed d, can't go further");
 			self->velocity.x = 0;
+			self->rotation.z = -1.57;
 		}
 		else {
 			slog("Pressed d");
 			self->velocity.x = -1;
+			self->rotation.z = -1.57;
 		}
 	}
 	else
