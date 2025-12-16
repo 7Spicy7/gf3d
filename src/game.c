@@ -74,7 +74,7 @@ int main(int argc,char *argv[])
     init_logger("gf3d.log",0); //1 wont delete log file at end
     //gfc init
     gfc_input_init("config/input.cfg");
-    gfc_audio_init(100, 1, 1);
+    gfc_sound_init_config("config/audio.cfg");
     gfc_config_def_init();
     gfc_action_init(1024);
 

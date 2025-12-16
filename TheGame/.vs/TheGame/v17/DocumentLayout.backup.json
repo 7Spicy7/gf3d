@@ -3,13 +3,13 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\TheGame\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\input.cfg||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\camera_entity.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
@@ -82,11 +82,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "input.cfg",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\input.cfg",
               "RelativeDocumentMoniker": "..\\config\\input.cfg",
@@ -95,8 +95,7 @@
               "ViewState": "AgIAAF0AAAAAAAAAAAAgwKIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-11-17T17:29:05.6Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -132,13 +131,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "game.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c",
               "RelativeDocumentMoniker": "..\\src\\game.c",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c",
               "RelativeToolTip": "..\\src\\game.c",
-              "ViewState": "AgIAAOsAAAAAAAAAAAAAAOsAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-09T01:27:03.407Z",
               "EditorCaption": ""
@@ -181,13 +180,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "player.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c",
               "RelativeDocumentMoniker": "..\\src\\player.c",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c",
               "RelativeToolTip": "..\\src\\player.c",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-10T00:27:48.755Z",
               "EditorCaption": ""
@@ -214,8 +213,7 @@
               "RelativeToolTip": "..\\include\\camera_entity.h",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-15T21:19:50.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T21:19:50.209Z"
             },
             {
               "$type": "Document",
@@ -227,8 +225,7 @@
               "RelativeToolTip": "..\\src\\camera_entity.c",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAFoAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-15T21:19:47.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T21:19:47.491Z"
             },
             {
               "$type": "Document",
@@ -348,8 +345,7 @@
               "RelativeToolTip": "..\\src\\entity.c",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-09T01:34:04.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T01:34:04.77Z"
             },
             {
               "$type": "Document",
@@ -373,8 +369,7 @@
               "RelativeToolTip": "..\\include\\entity.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-09T20:23:48.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-09T20:23:48.05Z"
             },
             {
               "$type": "Document",
