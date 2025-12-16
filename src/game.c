@@ -234,27 +234,27 @@ int main(int argc,char *argv[])
             }
             if (startgame == 1) {
                 if (echeckpoint == 0) {
-                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, -85), 0.5);
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, -85), 0.3);
                     monster->position.x = monsterxy.x;
                     monster->position.y = monsterxy.y;
                 }
                 if (echeckpoint == 1) {
-                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(-40, -85), 0.5);
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(-40, -85), 0.3);
                     monster->position.x = monsterxy.x;
                     monster->position.y = monsterxy.y;
                 }
                 if (echeckpoint == 2) {
-                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(-40, 70), 0.5);
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(-40, 70), 0.3);
                     monster->position.x = monsterxy.x;
                     monster->position.y = monsterxy.y;
                 }
                 if (echeckpoint == 3) {
-                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, 70), 0.5);
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, 70), 0.3);
                     monster->position.x = monsterxy.x;
                     monster->position.y = monsterxy.y;
                 }
                 if (echeckpoint == 4) {
-                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, 0), 0.5);
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, 0), 0.3);
                     monster->position.x = monsterxy.x;
                     monster->position.y = monsterxy.y;
                 }

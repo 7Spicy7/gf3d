@@ -11,17 +11,18 @@ Entity* player_spawn(GFC_Vector3D position, GFC_Color color)
 	self = entity_new();
 	if (!self) return NULL;
 	gfc_line_cpy(self->name, "notAgumon");
-	self->mesh = gf3d_mesh_load_obj("models/john/johnbird.obj");
-	self->texture = gf3d_texture_load("models/john/johnbird.png");
+	self->mesh = gf3d_mesh_load_obj("models/carts/babytank.obj");
+	self->texture = gf3d_texture_load("models/carts/babytank.png");
 	self->color = color;
 	self->position = position;
 	self->think = player_think;
 	self->update = player_update;
-	self->rotation.y = 0;
+	self->rotation.y = 1.57;
 	self->direction = 0;
 	self->velocity.x = 0;
 	self->turn = 0.1;
 	self->maxturn = 1.57;
+	self->topspeed = 0.6;
 	self->facing = gfc_vector3d(0,1,0);
 	//self->velocity.z = gfc_crandom();
 	return self;
@@ -73,8 +74,8 @@ void player_move(Entity* self)
 		else {
 		**/
 			//slog("Pressed w");
-			self->velocity.y = -(1 * self->facing.y);
-			self->velocity.x = -(1 * self->facing.x);
+			self->velocity.y = -(self->topspeed * self->facing.y);
+			self->velocity.x = -(self->topspeed * self->facing.x);
 		//}
 		
 	}
@@ -112,8 +113,8 @@ void player_move(Entity* self)
 		else {
 		**/
 			//slog("Pressed s");
-			self->velocity.y = (1 * self->facing.y);
-			self->velocity.x = (1 * self->facing.x);
+			self->velocity.y = (self->topspeed * self->facing.y);
+			self->velocity.x = (self->topspeed * self->facing.x);
 		//}
 	}
 	else {
@@ -170,6 +171,37 @@ void player_move(Entity* self)
 		//slog("Pressed e");
 		self->rotation.z = self->rotation.z - 0.1;
 		self->direction = self->direction - 0.1;
+	}
+
+	if (gfc_input_command_down("1"))
+	{
+		self->topspeed = 0.6;
+		self->mesh = gf3d_mesh_load_obj("models/carts/babytank.obj");
+		self->texture = gf3d_texture_load("models/carts/babytank.png");
+	}
+	if (gfc_input_command_down("2"))
+	{
+		self->topspeed = 1.2;
+		self->mesh = gf3d_mesh_load_obj("models/carts/draggy.obj");
+		self->texture = gf3d_texture_load("models/carts/draggy.png");
+	}
+	if (gfc_input_command_down("3"))
+	{
+		self->topspeed = 0.8;
+		self->mesh = gf3d_mesh_load_obj("models/carts/patchy.obj");
+		self->texture = gf3d_texture_load("models/carts/patchy.png");
+	}
+	if (gfc_input_command_down("4"))
+	{
+		self->topspeed = 1;
+		self->mesh = gf3d_mesh_load_obj("models/carts/uro.obj");
+		self->texture = gf3d_texture_load("models/carts/uro.png");
+	}
+	if (gfc_input_command_down("5"))
+	{
+		self->topspeed = 0.4;
+		self->mesh = gf3d_mesh_load_obj("models/carts/topspin.obj");
+		self->texture = gf3d_texture_load("models/carts/topspin.png");
 	}
 }
 
