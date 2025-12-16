@@ -1,0 +1,6 @@
+{
+	"name":"topspin",
+	"mesh":"models/carts/topspin.obj"
+	"texture":"models/carts/topspin.png"
+	"topspeed": 0.4
+}

@@ -67,6 +67,7 @@ int main(int argc,char *argv[])
     const Uint8* keys;
     GFC_Matrix4 modelMat;
     GFC_Sound *bgm;
+    GFC_Sound* bgma;
     GFC_Vector2D monsterxy;
     //initializtion    
 
@@ -74,6 +75,8 @@ int main(int argc,char *argv[])
     init_logger("gf3d.log",0); //1 wont delete log file at end
     //gfc init
     gfc_input_init("config/input.cfg");
+    SDL_Init(SDL_INIT_AUDIO);
+    gfc_audio_init(128, true, true);
     gfc_sound_init_config("config/audio.cfg");
     gfc_config_def_init();
     gfc_action_init(1024);
@@ -101,9 +104,12 @@ int main(int argc,char *argv[])
     player = player_spawn(gfc_vector3d(65, 0, 0), GFC_COLOR_WHITE);
     ground = ground_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     cam = camera_entity_spawn(&player);
-    bgm = gfc_sound_load_music("music/KARcitytrialcity.mp3");
+    bgm = gfc_sound_load("music/KARcitytrialcity.mp3", 1, 1);
+    bgma = bgm;
     checkpoint = 0, echeckpoint = 0, lap = 0, elap = 0, startgame = 0, pausetimer = 0;
-    Mix_PlayMusic(bgm, -1);
+    Mix_PlayChannel(1, bgma, 0);
+    gfc_sound_play_to_group(bgma, -1, 0.5, "world");
+    slog(Mix_GetError);
     slog("cam position %i, %i, %i", cam->position.x, cam->position.y, cam->position.z);
     while(!_done)
     {

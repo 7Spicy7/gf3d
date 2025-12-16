@@ -1,0 +1,6 @@
+{
+	"name":"babytank",
+	"mesh":"models/carts/babytank.obj"
+	"texture":"models/carts/babytank.png"
+	"topspeed": 0.6
+}

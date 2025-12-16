@@ -6,7 +6,22 @@
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\babytank.def||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\topspin.def||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\uro.def||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\draggy.def||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B69964C-D6C5-4FCE-8C87-79E85B4DF187}|TheGame.vcxproj|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\patchy.def||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\input.cfg||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
@@ -82,11 +97,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "input.cfg",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\input.cfg",
               "RelativeDocumentMoniker": "..\\config\\input.cfg",
@@ -95,7 +110,73 @@
               "ViewState": "AgIAAF0AAAAAAAAAAAAgwKIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-11-17T17:29:05.6Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "topspin.def",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\topspin.def",
+              "RelativeDocumentMoniker": "..\\defs\\topspin.def",
+              "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\topspin.def",
+              "RelativeToolTip": "..\\defs\\topspin.def",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-12-16T13:48:32.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "babytank.def",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\babytank.def",
+              "RelativeDocumentMoniker": "..\\defs\\babytank.def",
+              "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\babytank.def",
+              "RelativeToolTip": "..\\defs\\babytank.def",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-12-16T13:47:53.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "uro.def",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\uro.def",
+              "RelativeDocumentMoniker": "..\\defs\\uro.def",
+              "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\uro.def",
+              "RelativeToolTip": "..\\defs\\uro.def",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-12-16T13:47:09.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "draggy.def",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\draggy.def",
+              "RelativeDocumentMoniker": "..\\defs\\draggy.def",
+              "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\draggy.def",
+              "RelativeToolTip": "..\\defs\\draggy.def",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-12-16T13:46:35.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "patchy.def",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\patchy.def",
+              "RelativeDocumentMoniker": "..\\defs\\patchy.def",
+              "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\defs\\patchy.def",
+              "RelativeToolTip": "..\\defs\\patchy.def",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
+              "WhenOpened": "2025-12-16T13:42:58.93Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -107,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "gfc_vector.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\gfc\\include\\gfc_vector.h",
               "RelativeDocumentMoniker": "..\\gfc\\include\\gfc_vector.h",
@@ -119,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "gfc_vector.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\gfc\\src\\gfc_vector.c",
               "RelativeDocumentMoniker": "..\\gfc\\src\\gfc_vector.c",
@@ -137,14 +218,14 @@
               "RelativeDocumentMoniker": "..\\src\\game.c",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\game.c",
               "RelativeToolTip": "..\\src\\game.c",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAACpolkXwGoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-09T01:27:03.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "ground.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\ground.c",
               "RelativeDocumentMoniker": "..\\src\\ground.c",
@@ -156,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "ground.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\ground.h",
               "RelativeDocumentMoniker": "..\\include\\ground.h",
@@ -168,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "gfc_input.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\gfc\\src\\gfc_input.c",
               "RelativeDocumentMoniker": "..\\gfc\\src\\gfc_input.c",
@@ -180,20 +261,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "player.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c",
               "RelativeDocumentMoniker": "..\\src\\player.c",
               "ToolTip": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\player.c",
               "RelativeToolTip": "..\\src\\player.c",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-11-10T00:27:48.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "gf3d_camera.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_camera.c",
               "RelativeDocumentMoniker": "..\\src\\gf3d_camera.c",
@@ -205,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "camera_entity.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\camera_entity.h",
               "RelativeDocumentMoniker": "..\\include\\camera_entity.h",
@@ -217,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "camera_entity.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\camera_entity.c",
               "RelativeDocumentMoniker": "..\\src\\camera_entity.c",
@@ -229,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "monster.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\monster.c",
               "RelativeDocumentMoniker": "..\\src\\monster.c",
@@ -241,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "monster.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\monster.h",
               "RelativeDocumentMoniker": "..\\include\\monster.h",
@@ -253,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "player.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\player.h",
               "RelativeDocumentMoniker": "..\\include\\player.h",
@@ -265,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "overlay_pipeline.cfg",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\overlay_pipeline.cfg",
               "RelativeDocumentMoniker": "..\\config\\overlay_pipeline.cfg",
@@ -277,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "gf3d_shaders.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\gf3d_shaders.h",
               "RelativeDocumentMoniker": "..\\include\\gf3d_shaders.h",
@@ -289,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "model_pipeline.cfg",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\config\\model_pipeline.cfg",
               "RelativeDocumentMoniker": "..\\config\\model_pipeline.cfg",
@@ -301,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "gf3d_vgraphics.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\gf3d_vgraphics.h",
               "RelativeDocumentMoniker": "..\\include\\gf3d_vgraphics.h",
@@ -313,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "gf3d_commands.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_commands.c",
               "RelativeDocumentMoniker": "..\\src\\gf3d_commands.c",
@@ -325,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "gf3d_pipeline.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_pipeline.c",
               "RelativeDocumentMoniker": "..\\src\\gf3d_pipeline.c",
@@ -337,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "entity.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\entity.c",
               "RelativeDocumentMoniker": "..\\src\\entity.c",
@@ -349,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "gf3d_vgraphics.c",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\src\\gf3d_vgraphics.c",
               "RelativeDocumentMoniker": "..\\src\\gf3d_vgraphics.c",
@@ -361,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "entity.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\entity.h",
               "RelativeDocumentMoniker": "..\\include\\entity.h",
@@ -373,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "gf3d_camera.h",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ajr89\\git\\gf3d\\include\\gf3d_camera.h",
               "RelativeDocumentMoniker": "..\\include\\gf3d_camera.h",

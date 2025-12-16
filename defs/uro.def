@@ -1,0 +1,6 @@
+{
+	"name":"uro",
+	"mesh":"models/carts/uro.obj"
+	"texture":"models/carts/uro.png"
+	"topspeed": 1
+}

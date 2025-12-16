@@ -1,0 +1,6 @@
+{
+	"name":"patchy",
+	"mesh":"models/carts/patchy.obj"
+	"texture":"models/carts/patchy.png"
+	"topspeed": 0.8
+}

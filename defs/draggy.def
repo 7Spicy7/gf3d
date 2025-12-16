@@ -1,0 +1,6 @@
+{
+	"name":"draggy",
+	"mesh":"models/carts/draggy.obj"
+	"texture":"models/carts/draggy.png"
+	"topspeed": 1.2
+}
