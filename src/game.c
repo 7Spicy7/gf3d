@@ -47,6 +47,12 @@ void exitGame()
 int main(int argc,char *argv[])
 {
     //local variables
+    int startgame;
+    int pausetimer;
+    int checkpoint;
+    int echeckpoint;
+    int lap;
+    int elap;
     Sprite *bg;
     Mesh* mesh;
     Texture* texture;
@@ -55,16 +61,19 @@ int main(int argc,char *argv[])
     Entity* ground;
     float theta = 0;
     GFC_Vector3D lightPos = { 5,5,20 };
+    GFC_Vector3D pointto = { 1000,-1000,100 };
     Entity* cam;
     GFC_Matrix4 id, dinoM;
     const Uint8* keys;
     GFC_Matrix4 modelMat;
+    GFC_Sound *bgm;
     //initializtion    
 
     parse_arguments(argc,argv);
     init_logger("gf3d.log",0); //1 wont delete log file at end
     //gfc init
     gfc_input_init("config/input.cfg");
+    gfc_audio_init(100, 1, 1);
     gfc_config_def_init();
     gfc_action_init(1024);
 
@@ -86,10 +95,13 @@ int main(int argc,char *argv[])
     //gf3d_camera_look_at(gfc_vector3d(0, 0, 0), &cam);
     mesh = gf3d_mesh_load_obj("models/sky/sky.obj");
     texture = gf3d_texture_load("models/sky/sky.png");
-    monster = monster_spawn(gfc_vector3d(-10, 0, 0), GFC_COLOR_WHITE);
-    player = player_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
+    monster = monster_spawn(gfc_vector3d(69, 0, 0), GFC_COLOR_WHITE);
+    player = player_spawn(gfc_vector3d(65, 0, 0), GFC_COLOR_WHITE);
     ground = ground_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     cam = camera_entity_spawn(&player);
+    bgm = gfc_sound_load_music("music/KARcitytrialcity.mp3");
+    checkpoint = 0, echeckpoint = 0, lap = 0, elap = 0, startgame = 0, pausetimer = 0;
+    Mix_PlayMusic(bgm, -1);
     slog("cam position %i, %i, %i", cam->position.x, cam->position.y, cam->position.z);
     while(!_done)
     {
@@ -99,30 +111,94 @@ int main(int argc,char *argv[])
         gf2d_font_update();
         theta += .1;
         gfc_matrix4_rotate_z(dinoM, id, theta);
-        entity_system_think_all();
-        entity_system_update_all();
-        camera_entity_update2(cam, player);
-        entity_system_move_all();
-        //camera updates
-        gf3d_vgraphics_render_start();
-                //3D draws
-                gf3d_mesh_sky_draw(mesh, modelMat, GFC_COLOR_WHITE, texture);
-                entity_system_draw_all(lightPos, GFC_COLOR_RED); //Change id to dinoM
-                //2D draws
-               // gf2d_sprite_draw_image(bg,gfc_vector2d(0,0));
-                gf2d_font_draw_line_tag("ALT+F4 to exit",FT_H1,GFC_COLOR_WHITE, gfc_vector2d(10,10));
-                if ((player->velocity.x != 0) || (player->velocity.y != 0)) {
-                    gf2d_font_draw_line_tag("Shmovement :)", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 40));
+        
+            entity_system_think_all();
+            if (startgame == 1) {
+                entity_system_update_all();
+                camera_entity_update2(cam, player);
+                entity_system_move_all();
+            }
+            if (startgame == 0) {
+                camera_entity_update2(cam, &pointto);
+            }
+            //camera updates
+            gf3d_vgraphics_render_start();
+            //3D draws
+            gf3d_mesh_sky_draw(mesh, modelMat, GFC_COLOR_WHITE, texture);
+            entity_system_draw_all(lightPos, GFC_COLOR_RED); //Change id to dinoM
+            //2D draws
+           // gf2d_sprite_draw_image(bg,gfc_vector2d(0,0));
+            if (startgame == 1) {
+                gf2d_font_draw_line_tag("P to pause", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 10));
+                    if ((player->velocity.x != 0) || (player->velocity.y != 0)) {
+                        gf2d_font_draw_line_tag("Shmovement :)", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 40));
+                    }
+                    else {
+                        gf2d_font_draw_line_tag("No Shmovement :(", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 40));
+                    }
+                    if (gfc_input_command_down("pause")) {
+                        if (pausetimer == 0) 
+                        { 
+                        startgame = 0;
+                        pausetimer = 30;
+                        }
+                    }
+            }
+            if (startgame == 0) {
+                gf2d_font_draw_line_tag("P to start game", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 10));
+                gf2d_font_draw_line_tag("ALT+F4 to exit", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 40));
+                if (gfc_input_command_down("exit"))_done = 1; // exit condition
+                if (gfc_input_command_down("pause")) {
+                    if (pausetimer == 0)
+                    {
+                        startgame = 1;
+                        pausetimer = 30;
+                    }
                 }
-                else {
-                    gf2d_font_draw_line_tag("No Shmovement :(", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 40));
+            }
+            if (((player->position.x >= -12) && (player->position.x <= -8)) && ((player->position.y >= -2) && (player->position.y <= 2))) {
+                gf2d_font_draw_line_tag("Contact", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 70));
+            }
+            //checkpoints
+            if (((player->position.x >= 60) && (player->position.x <= 70)) && ((player->position.y <= -70) && (player->position.y >= -80))) {
+                if (checkpoint == 0) {
+                    checkpoint = 1;
+                    slog("checkpoint 1!");
                 }
-                if (((player->position.x >= -12) && (player->position.x <= -8)) && ((player->position.y >= -2) && (player->position.y <= 2))) {
-                    gf2d_font_draw_line_tag("Contact", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 70));
+            }
+            if (((player->position.x >= -45) && (player->position.x <= -35)) && ((player->position.y <= -70) && (player->position.y >= -80))) {
+                if (checkpoint == 1) {
+                    checkpoint = 2;
+                    slog("checkpoint 2!");
                 }
-                gf2d_mouse_draw();
-        gf3d_vgraphics_render_end();
-        if (gfc_input_command_down("exit"))_done = 1; // exit condition
+            }
+            if (((player->position.x >= -40) && (player->position.x <= -30)) && ((player->position.y >= 70) && (player->position.y <= 80))) {
+
+                if (checkpoint == 2) {
+                    checkpoint = 3;
+                    slog("checkpoint 3!");
+                }
+            }
+            if ((player->position.x >= 60) && (player->position.y >= 65)) {
+                if (checkpoint == 3) {
+                    checkpoint = 4;
+                    slog("checkpoint 4!");
+                }
+            }
+            if (((player->position.x >= 60) && (player->position.x <= 70)) && ((player->position.y <= 10) && (player->position.y >= -10))) {
+                if (checkpoint == 4) {
+                    slog("lap!");
+                    checkpoint = 0;
+                    lap += 1;
+                    slog("laps total: %i", lap);
+                }
+            }
+           
+            gf2d_mouse_draw();
+            gf3d_vgraphics_render_end();
+            if (pausetimer > 0) pausetimer--;
+
+        
         game_frame_delay();
     }    
     vkDeviceWaitIdle(gf3d_vgraphics_get_default_logical_device());    

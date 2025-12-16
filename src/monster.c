@@ -12,7 +12,7 @@ Entity* monster_spawn(GFC_Vector3D position, GFC_Color color) {
 	self->mesh = gf3d_mesh_load_obj("models/characters/punchy/punchy.obj");
 	self->texture = gf3d_texture_load("models/characters/punchy/punchy.png");
 	self->color = color;
-	self->rotation.y = 90;
+	self->rotation.y = 1.57;
 	self->position = position;
 	//self->velocity.z = gfc_crandom();
 	return self;

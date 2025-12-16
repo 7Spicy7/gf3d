@@ -21,6 +21,12 @@ typedef struct Entity_S
 	GFC_Vector3D					position;
 	GFC_Vector3D					drawOffset;
 	GFC_Vector3D					rotation;
+	float                           direction;
+	float                           turn;
+	float                           maxturn;
+	float                           currentturn;
+	float                           topspeed;
+	GFC_Vector3D                    facing;
 	GFC_Vector3D					scale;
 	GFC_Vector3D					velocity;
 	GFC_Vector3D					acceleration;

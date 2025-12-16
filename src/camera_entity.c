@@ -36,18 +36,18 @@ void camera_entity_free(Entity* self) {
 
 void camera_entity_think(Entity* self) {
 	float look = 1;
-	float turn = 0.02;		//The rate at which I turn
+	//float turn = 0.02;		//The rate at which I turn
 
 	CameraEntityData* data;
 	if ((!self) || (!self->data)) return;
 	data = self->data;
 	//Lookies:
-	if (gfc_input_command_down("panleft")) {
-		data->angle -= turn;
-	}
-	if (gfc_input_command_down("panright")) {
-		data->angle += turn;
-	}
+	//if (gfc_input_command_down("walkleft")) {
+	//	data->angle = 1.57;
+	//}
+	//if (gfc_input_command_down("walkright")) {
+	//	data->angle = -1.57;
+	//}
 	//Up and down is inherently different; we don't wanna change our angle here.
 	if (gfc_input_command_down("panup")) {
 		data->followHeight += look;
@@ -64,7 +64,6 @@ void camera_entity_update(Entity* self) {
 	//if ((!self) || (!self->data)) return;
 	//data = self->data;
 	//offset = gfc_vector3d(0, 1, 0); //initialize to be in the +y direction (will not matter. Because we're rotating it all about the xy plane anyway)
-
 	//gfc_vector3d_rotate_about_z(&offset, data->angle);
 	//gfc_vector3d_scale(offset, offset, data->followDistance); //Scale the offset so it's followDistance AWAY from my entity
 	//offset.z = data->followHeight;
@@ -82,14 +81,19 @@ void camera_entity_update2(Entity* self, Entity* target) {
 	if ((!self) || (!self->data)) return;
 	data = self->data;
 	offset = gfc_vector3d(0, 1, 0); //initialize to be in the +y direction (will not matter. Because we're rotating it all about the xy plane anyway)
-
+	if (gfc_input_command_down("walkleft")) {
+			self->currentturn = self->currentturn + self->turn;
+			data->angle = self->currentturn;
+	}
+	else if (gfc_input_command_down("walkright")) {
+			self->currentturn = self->currentturn - self->turn;
+			data->angle = self->currentturn;
+	}
 	gfc_vector3d_rotate_about_z(&offset, data->angle);
 	gfc_vector3d_scale(offset, offset, data->followDistance); //Scale the offset so it's followDistance AWAY from my entity
 	offset.z = data->followHeight;
-	gfc_vector3d_add(self->position, offset, data->target->position);
+	gfc_vector3d_add(self->position, offset, target->position);
 
-	self->position.x = target->position.x;
-	self->position.y = target->position.y + 50;
 
 	gf3d_camera_look_at(target->position, &self->position); //nearly forgot this line when I moved the offset code from Think into Update lol
 	gf3d_camera_update_view();
@@ -101,13 +105,14 @@ Entity* camera_entity_spawn(Entity *target) {
 	Entity* self;
 	self = entity_new();
 	if (!self) return NULL;
-
+	
 	data = gfc_allocate_array(sizeof(CameraEntityData), 1);
 	if (!data) {
 		entity_free(self);
 		slog("Cannot allocate Camera Entity Data. Not spawning");
 		return NULL;
 	}
+	self->direction = target->direction;
 	self->think = camera_entity_think;
 	self->update = camera_entity_update;
 	self->free = camera_entity_free;
@@ -116,13 +121,15 @@ Entity* camera_entity_spawn(Entity *target) {
 	//Set all the data values
 	data->target = target;
 	data->angle = 0;
-	data->followDistance = 50;
-	data->followHeight = 15;
+	data->followDistance = 10;
+	data->followHeight = 5;
 	//set MY data  to be the CameraEntityData pointer
 	self->targetPos = &target->position;
 	self->data = data;
 	self->position.y = self->targetPos->y + data->followDistance;
 	self->position.z = data->followHeight;
+	self->turn = 0.1;
+	self->currentturn = 0;
 	//slog("My Camera Entity's Y position is: %f\nWhile my target, %s, Y position is: %f", self->position.y, target->name, data->target->position.y);
 
 
