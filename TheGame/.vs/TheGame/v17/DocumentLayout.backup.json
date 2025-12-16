@@ -110,8 +110,15 @@
               "ViewState": "AgIAAF0AAAAAAAAAAAAgwKIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-11-17T17:29:05.6Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -123,8 +130,7 @@
               "RelativeToolTip": "..\\defs\\topspin.def",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
-              "WhenOpened": "2025-12-16T13:48:32.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T13:48:32.646Z"
             },
             {
               "$type": "Document",
@@ -136,8 +142,7 @@
               "RelativeToolTip": "..\\defs\\babytank.def",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
-              "WhenOpened": "2025-12-16T13:47:53.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T13:47:53.247Z"
             },
             {
               "$type": "Document",
@@ -149,8 +154,7 @@
               "RelativeToolTip": "..\\defs\\uro.def",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
-              "WhenOpened": "2025-12-16T13:47:09.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T13:47:09.516Z"
             },
             {
               "$type": "Document",
@@ -162,8 +166,7 @@
               "RelativeToolTip": "..\\defs\\draggy.def",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
-              "WhenOpened": "2025-12-16T13:46:35.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T13:46:35.779Z"
             },
             {
               "$type": "Document",
@@ -175,16 +178,7 @@
               "RelativeToolTip": "..\\defs\\patchy.def",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001913|",
-              "WhenOpened": "2025-12-16T13:42:58.93Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "WhenOpened": "2025-12-16T13:42:58.93Z"
             },
             {
               "$type": "Document",
@@ -269,8 +263,7 @@
               "RelativeToolTip": "..\\src\\player.c",
               "ViewState": "AgIAALoAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-11-10T00:27:48.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T00:27:48.755Z"
             },
             {
               "$type": "Document",

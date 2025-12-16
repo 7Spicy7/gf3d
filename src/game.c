@@ -104,12 +104,12 @@ int main(int argc,char *argv[])
     player = player_spawn(gfc_vector3d(65, 0, 0), GFC_COLOR_WHITE);
     ground = ground_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     cam = camera_entity_spawn(&player);
-    bgm = gfc_sound_load("music/KARcitytrialcity.mp3", 1, 1);
+    bgm = gfc_sound_load("music/KARcitytrialcity.wav", 1, 1);
     bgma = bgm;
     checkpoint = 0, echeckpoint = 0, lap = 0, elap = 0, startgame = 0, pausetimer = 0;
-    Mix_PlayChannel(1, bgma, 0);
+    Mix_PlayChannel(1, bgma->sound, 0);
     gfc_sound_play_to_group(bgma, -1, 0.5, "world");
-    slog(Mix_GetError);
+    slog("%s",Mix_GetError());
     slog("cam position %i, %i, %i", cam->position.x, cam->position.y, cam->position.z);
     while(!_done)
     {
