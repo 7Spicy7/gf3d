@@ -31,6 +31,7 @@ typedef struct Entity_S
 	GFC_Vector3D					velocity;
 	GFC_Vector3D					acceleration;
 	Uint8							drawShadow;
+	int                             checks;
 
 
 	//GFC_Primitive					collision; 	//Primitives are shapes in 3D; this is NOT the same as a mesh primitive

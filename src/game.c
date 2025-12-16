@@ -67,6 +67,7 @@ int main(int argc,char *argv[])
     const Uint8* keys;
     GFC_Matrix4 modelMat;
     GFC_Sound *bgm;
+    GFC_Vector2D monsterxy;
     //initializtion    
 
     parse_arguments(argc,argv);
@@ -96,6 +97,7 @@ int main(int argc,char *argv[])
     mesh = gf3d_mesh_load_obj("models/sky/sky.obj");
     texture = gf3d_texture_load("models/sky/sky.png");
     monster = monster_spawn(gfc_vector3d(69, 0, 0), GFC_COLOR_WHITE);
+    monsterxy = gfc_vector2d(monster->position.x, monster->position.y);
     player = player_spawn(gfc_vector3d(65, 0, 0), GFC_COLOR_WHITE);
     ground = ground_spawn(gfc_vector3d(0, 0, 0), GFC_COLOR_WHITE);
     cam = camera_entity_spawn(&player);
@@ -160,19 +162,19 @@ int main(int argc,char *argv[])
                 gf2d_font_draw_line_tag("Contact", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 70));
             }
             //checkpoints
-            if (((player->position.x >= 60) && (player->position.x <= 70)) && ((player->position.y <= -70) && (player->position.y >= -80))) {
+            if (((player->position.x >= 60) && (player->position.x <= 70)) && ((player->position.y <= -80) && (player->position.y >= -90))) {
                 if (checkpoint == 0) {
                     checkpoint = 1;
                     slog("checkpoint 1!");
                 }
             }
-            if (((player->position.x >= -45) && (player->position.x <= -35)) && ((player->position.y <= -70) && (player->position.y >= -80))) {
+            if (((player->position.x >= -45) && (player->position.x <= -35)) && ((player->position.y <= -80) && (player->position.y >= -90))) {
                 if (checkpoint == 1) {
                     checkpoint = 2;
                     slog("checkpoint 2!");
                 }
             }
-            if (((player->position.x >= -40) && (player->position.x <= -30)) && ((player->position.y >= 70) && (player->position.y <= 80))) {
+            if (((player->position.x >= -40) && (player->position.x <= -30)) && ((player->position.y >= 65) && (player->position.y <= 75))) {
 
                 if (checkpoint == 2) {
                     checkpoint = 3;
@@ -193,7 +195,71 @@ int main(int argc,char *argv[])
                     slog("laps total: %i", lap);
                 }
             }
-           
+            if (((player->position.x >= -12) && (player->position.x <= -8)) && ((player->position.y >= -2) && (player->position.y <= 2))) {
+                gf2d_font_draw_line_tag("Contact", FT_H1, GFC_COLOR_WHITE, gfc_vector2d(10, 70));
+            }
+            //enemy checkpoints
+            if (((monster->position.x >= 60) && (monster->position.x <= 70)) && ((monster->position.y <= -80) && (monster->position.y >= -90))) {
+                if (echeckpoint == 0) {
+                    echeckpoint = 1;
+                    slog("enemy checkpoint 1!");
+                }
+            }
+            if (((monster->position.x >= -45) && (monster->position.x <= -35)) && ((monster->position.y <= -80) && (monster->position.y >= -90))) {
+                if (echeckpoint == 1) {
+                    echeckpoint = 2;
+                    slog("enemy checkpoint 2!");
+                }
+            }
+            if (((monster->position.x >= -40) && (monster->position.x <= -30)) && ((monster->position.y >= 65) && (monster->position.y <= 75))) {
+
+                if (echeckpoint == 2) {
+                    echeckpoint = 3;
+                    slog("enemy checkpoint 3!");
+                }
+            }
+            if ((monster->position.x >= 60) && (monster->position.y >= 65)) {
+                if (echeckpoint == 3) {
+                    echeckpoint = 4;
+                    slog("enemy checkpoint 4!");
+                }
+            }
+            if (((monster->position.x >= 60) && (monster->position.x <= 70)) && ((monster->position.y <= 10) && (monster->position.y >= -10))) {
+                if (echeckpoint == 4) {
+                    slog("enemy lap!");
+                    echeckpoint = 0;
+                    elap += 1;
+                    slog("enemy laps total: %i", elap);
+                }
+            }
+            if (startgame == 1) {
+                if (echeckpoint == 0) {
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, -85), 0.5);
+                    monster->position.x = monsterxy.x;
+                    monster->position.y = monsterxy.y;
+                }
+                if (echeckpoint == 1) {
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(-40, -85), 0.5);
+                    monster->position.x = monsterxy.x;
+                    monster->position.y = monsterxy.y;
+                }
+                if (echeckpoint == 2) {
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(-40, 70), 0.5);
+                    monster->position.x = monsterxy.x;
+                    monster->position.y = monsterxy.y;
+                }
+                if (echeckpoint == 3) {
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, 70), 0.5);
+                    monster->position.x = monsterxy.x;
+                    monster->position.y = monsterxy.y;
+                }
+                if (echeckpoint == 4) {
+                    gfc_vector2d_move_towards(&monsterxy, gfc_vector2d(monster->position.x, monster->position.y), gfc_vector2d(65, 0), 0.5);
+                    monster->position.x = monsterxy.x;
+                    monster->position.y = monsterxy.y;
+                }
+            }
+            
             gf2d_mouse_draw();
             gf3d_vgraphics_render_end();
             if (pausetimer > 0) pausetimer--;

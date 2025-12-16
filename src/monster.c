@@ -14,6 +14,8 @@ Entity* monster_spawn(GFC_Vector3D position, GFC_Color color) {
 	self->color = color;
 	self->rotation.y = 1.57;
 	self->position = position;
+	self->facing = gfc_vector3d(0, 1, 0);
+	self->checks = 0;
 	//self->velocity.z = gfc_crandom();
 	return self;
 }
